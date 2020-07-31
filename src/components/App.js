@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Projects from './Projects';
 import SocialProfiles from './SocialProfiles';
-import profile from './assets/profile.jpg';
+import profile from '../assets/profile.jpg';
+import Title from './Title'; 
 
 class App extends Component {
 
@@ -15,10 +16,12 @@ class App extends Component {
 
         return (
             <div>
+            
                 <img src={profile} alt='profile' className='profile' />
                 <h1> <strong> Hello !</strong> </h1>
                 <h1>I am Akash Kiran</h1>
-                <p>I am a Software Engineer looking forward to work on Meaningful Projects</p>
+                <Title />
+                <p>I am always looking forward to work on Meaningful Projects</p>
                 {
                     this.state.displayBio ? (
                         <div> 
@@ -37,9 +40,11 @@ class App extends Component {
                 <Projects />
                 <hr />
                 <SocialProfiles />
+            
             </div>
         )
     }
 }
+
 
 export default App; 
